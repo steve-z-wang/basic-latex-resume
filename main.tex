@@ -1,0 +1,94 @@
+\documentclass[a4paper,10pt]{extarticle}
+
+% Import the templates and custom commands from the external file
+\input{resume_templates}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{a4paper, margin=0.5in} % Set paper size and margins
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref} % Hyperlinks setup 
+\usepackage{enumitem} % For customizing itemize environments
+\usepackage{setspace}
+
+% Begin document
+\begin{document}
+
+% Disable page numbers
+\pagestyle{empty}
+
+% Header
+\customheader{Steve Wang}{(650) 799-2578}{sw2327@cornell.edu}{stevewang2000}
+
+% Skills 
+\begin{customsection}{Skills}
+    \textbf{Languages \& Tools:} Python, Java, JavaScript, C, C++, C\#, SQL, Bash, MATLAB, Docker, Git\\ 
+    \textbf{Technologies:} AWS, React, Django, Flask, Redis, Unity, Pandas, Scikit-learn, Keras, PyTorch, TensorFlow \\ 
+    \textbf{Expertise:} Full-stack Development, Cloud Computing, Machine Learning, Embedded System
+\end{customsection}
+
+% Experience 
+\begin{customsection}{Experience}
+
+    % Experience #1
+    \experience{Amazon Web Services (AWS)}{Seattle, WA}{May 2024 - Aug. 2024}{Software Development Engineer Internship}
+    {AWS (Lambda, Fargate, S3, DynamoDB, ECR), Python, Boto3, Docker, AWS CDK}
+    {
+        \item Designed and implemented a Slack App for internal customers to provide precise business data forecasts, improving planning and time management by addressing the limitations of existing generic estimations.
+        \item Implemented and deployed a weekly model training pipeline to process long-term data and retrain the model, along with a daily batch prediction pipeline to handle short-term data and generate daily predictions, ensuring up-to-date and accurate machine learning outcomes.
+        \item Developed a robust machine learning model to predict service lead times across various percentiles, overcoming challenges related to imbalanced and limited data. 
+        \item Collaborated closely with internal customers and UX designers to create a user-friendly Slack bot interface. 
+    }
+    
+\end{customsection}
+
+% Projects 
+\begin{customsection}{Projects}
+
+    \project{TracCrop: Master’s Degree Capstone Project}{Ithaca, NY}{Oct. 2023 - Present}
+    {Azure, Python, Django, Javascript, React, SQL, Redis}
+    {
+        \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, enabling them to manage crop status, chemical usage, monitoring, policy compliance, and sustainability tasks within an integrated platform.
+        \item Developed specialized workflow control and data visualization features based on user feedback, designed the front-end interface, and created corresponding endpoints and RESTful web services.
+        \item Optimized data retrieval by introducing a Redis-based caching layer, reducing business dashboard and report page load times from 15 seconds to under 2 seconds.
+        \item Established a scheduled, automated data pipeline to fetch and update reference data from public chemical and agricultural sources, ensuring the database remains consistently accurate with the latest information.
+    }
+
+    \project{Interactive LED Clock (Embedded System Course Project)}{Ithaca, NY}{Nov. 2023}
+    {Raspberry Pi, Python, GPIO, C++, Multi-threading}
+    {
+        \item Designed and developed an interactive LED clock using Raspberry Pi, featuring three continuous LED pixel panels display with gravity simulation for dynamic display orientation.
+        \item Created user interaction features, including gravity-based orientation effects, snowflake pixel effects, alarm settings, image rolling, and transitioning between display panels, managed through a gyro sensor and physical buttons connected via GPIO.
+        \item Wrote a custom inter-process FIFO driver for efficient pixel data transfer and real-time updates, ensuring smooth performance and custom animations on the LED matrix.
+    }
+
+    \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}{Atlanta, GA}{Sep. 2022 - Dec. 2022}
+    {Unity, C\#}
+    {
+        \item Developed an online, multiplayer, co-op, rogue-like pixel game where players control a ghost with the unique ability to possess enemies, collaboratively with a team of five using Scrum methodology.
+        \item Utilized Unity's Random Function for dungeon generation, creating dynamic and unpredictable levels with prefab-based room and corridor structures.
+        \item Contributed to the design and development of enemy AI, including custom animations, abilities, and interaction logic.
+    }
+
+\end{customsection}
+
+% Education 
+\begin{customsection}{EDUCATION}
+
+    \education{Cornell University}{Ithaca, NY}{Sep. 2023 – Dec. 2024 (Expected)}
+    {Master of Engineering, Electrical and Computer Engineering, GPA 3.55/4.00}
+
+    \education{Emory University}{Atlanta, GA}{Sep. 2021 – May 2023}
+    {Bachelor of Science, Mathematics \& Computer Science, GPA 3.57/4.00}
+
+\end{customsection}
+ 
+% Award
+\begin{customsection}{Award and Achievements}
+
+    \award{Bronze Award, Top 8\% (69/937)}{Lyft Autonomous Vehicles Motion Prediction Competition}{Nov. 2020}
+
+\end{customsection}
+
+% End document
+\end{document}

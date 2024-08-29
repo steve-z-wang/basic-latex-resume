@@ -1,0 +1,65 @@
+% resume_templates.tex
+
+% Custom Header Command Template
+\newcommand{\customheader}[4]{%
+    \begin{center}
+    \textbf{\Large #1}\\ % Name
+    \vspace{0.5em}
+    \textbf{Phone:} #2 \, 
+    \textbf{Email:} \href{mailto:#3}{#3} \, 
+    \textbf{LinkedIn:} \href{https://www.linkedin.com/in/#4}{#4}
+    \end{center}
+    \vspace{-1.5em} % Reduce space after the header
+}
+
+% Custom section environment
+\newenvironment{customsection}[1]{
+    \vspace{-0.5em}
+    \section*{\normalsize \MakeUppercase{#1}} % Set section header size to normal text size
+    \vspace{-0.75em} % Reduce space between header and line
+    \hrule
+    
+    \begingroup
+    \setlength{\parindent}{0em} % No indentation for paragraphs
+    \setlength{\parskip}{1em} 
+}{
+    \endgroup
+}
+
+% Custom itemize environment
+\newenvironment{customitemize}{
+    \vspace{-\parskip}
+    \begin{itemize}[left=1em, topsep=0em, itemsep=0em, partopsep=0em, parsep=0em]
+}{
+    \end{itemize}
+}
+
+% Experience Template
+\newcommand{\experience}[6]{
+    \textbf{#1}. #2. \hfill #3 \\
+    \textit{#4} \\ 
+    \textit{Technologies: #5}
+    \begin{customitemize}
+        #6 % This will allow you to use \item inside the command
+    \end{customitemize}
+}
+
+% Project Template
+\newcommand{\project}[5]{
+    \textbf{#1}. #2. \hfill #3 \\
+    \textit{Technologies: #4}
+    \begin{customitemize}
+        #5 % This will allow you to use \item inside the command
+    \end{customitemize}
+}
+
+% Education Template
+\newcommand{\education}[4]{
+    \textbf{#1}. #2. \hfill #3 \\ 
+    #4
+}
+
+% Award Template
+\newcommand{\award}[3]{
+    \textbf{#1}, #2. \hfill #3
+}
