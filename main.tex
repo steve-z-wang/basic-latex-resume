@@ -5,9 +5,9 @@
 
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
-\usepackage[letterpaper, margin=0.4in]{geometry}
+\usepackage[letterpaper, margin=0.5in]{geometry}
 \usepackage{enumitem} % For customizing itemize environments
-\usepackage{setspace}
+\usepackage{calc} % For length calculation 
 
 % Automatically underline all hyperlinks
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref} % Hyperlinks setup 
@@ -24,7 +24,7 @@
 % Skills 
 \begin{customsectionnoskip}{Skills}
 
-    \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning, Embedded System} \\ 
+    \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning, Embedded Systems} \\ 
     \skillgroup{Languages \& Tools}{Python, Java, JavaScript, C, C++, C\#, SQL, Bash, PostgreSQL, MATLAB, Docker, Git} \\ 
     \skillgroup{Technologies}{AWS, React, Django, Flask, Spring Boot, Redis, NumPy, Pandas, Scikit-learn, TensorFlow} 
 
@@ -39,9 +39,9 @@
     {Python, AWS (Lambda, Fargate, S3, DynamoDB, Redshift, IAM), Docker, Boto3, AWS CDK}
     {
         \item Designed and implemented an end-to-end business data forecasting service for AWS Snow internal customers, enhancing planning and time management by addressing limitations of existing generic estimations.
-        \item Developed a robust machine learning model to accurately predict service lead times across multiple percentiles, overcoming challenges of imbalanced and limited data through specialized feature engineering, including survival analysis and lag features. 
-        \item Implemented and deployed a weekly model training pipeline to process long-term data and retrain the model, along with a daily batch prediction pipeline to handle short-term data and generate daily predictions, ensuring up-to-date and accurate machine learning outcomes.
-        \item Collaborated closely with internal customers and UX designers to create a user-friendly Slack bot interface, ensuring the service met customer needs and was accessible and easy to use.
+        \item Developed a robust machine learning model to accurately predict service lead times across multiple percentiles, overcoming challenges of imbalanced and limited data through various feature engineering techniques, including survival analysis and tailored lag features. 
+        \item Implemented and deployed a weekly model training pipeline to process long-term data and retrain the model, along with a daily batch prediction pipeline to handle short-term data and generate daily predictions, ensuring up-to-date and accurate machine learning results. 
+        \item Engaged with multiple internal customers and collaborated closely with UX designers to create a user-friendly Slack bot interface, guaranteeing the service met customer needs and was both accessible and easy to use.
     }
     
 \end{customsection}
@@ -50,20 +50,20 @@
 \begin{customsection}{Projects}
 
     \project{TracCrop: Master’s Degree Capstone Project}{Ithaca, NY}{Oct. 2023 -- Present}
-    {Javascript, Python, React, Django, SQL, Redis, Azure}
+    {JavaScript, Python, React, Django, SQL, Redis, Azure}
     {
-        \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within an integrated system.
+        \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within a unified system.
         \item Implemented specialized workflow controls and data visualization features from customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
-        \item Optimized data retrieval by implementing a Redis-based caching layer, reducing business dashboard and report page load times from 15 seconds to under 1 seconds, significantly improving the customer experience.
-        \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and up-to-date information.
+        \item Optimized data retrieval by implementing a Redis-based caching layer, reducing business dashboard and report page load times from an average of 12 seconds to under 1 second, significantly improving the customer experience.
+        \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and maintaining up-to-date information.
     }
 
     \project{Interactive LED Clock (Embedded System Course Project)}{Ithaca, NY}{Nov. 2023}
     {C++, Python, Raspberry Pi, GPIO, Multi-threading}
     {
-        \item Designed and developed an interactive LED clock using Raspberry Pi, featuring continuous display of three LED pixel panels with gravity simulation for dynamic display orientation.
-        \item Created user interaction features, including gravity-based orientation effects, snowflake pixel effects, alarm settings, image rolling, and transitioning between display panels, managed through a gyro sensor and physical buttons connected via GPIO.
-        \item Wrote a custom inter-process FIFO driver for efficient pixel data transfer and real-time updates, ensuring smooth performance and custom animations on the LED matrix.
+        \item Designed and developed an interactive LED clock using a Raspberry Pi, featuring a continuous display across three LED pixel panels with a gravitational sensor input for dynamic orientation and effects.
+        \item Created user interaction features, including gravity-based orientation and snowflake pixel effects managed through a gyro sensor, as well as an alarm settings interface activated via physical buttons connected through GPIO.
+        \item Developed a custom inter-process FIFO driver for a 3-panel LED display, enabling efficient and reliable pixel data transfer and real-time updates across multiple threads, facilitating smooth performance and seamless custom animations on the LED matrix.
     }
 
     \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}{Atlanta, GA}{Sep. 2022 -- Dec. 2022}
@@ -71,7 +71,7 @@
     {
         \item Worked with a team of five using Scrum methodology to create an online, multiplayer, rogue-like pixel game where players control a ghost with the ability to possess enemies and harness their powers.
         \item Utilized Unity’s Random Function to generate procedurally generated dungeons with prefab-based room and corridor structures, ensuring unique levels for each playthrough.
-        \item Implemented enemy behaviors with custom animations, abilities, and interaction logic, enhancing the game's challenge and player engagement.
+        \item Implemented enemy behaviors with tailored abilities, interactive logic, and custom animations, enhancing the game's challenge and deepening player engagement.
     }
 
 \end{customsection}
@@ -88,7 +88,7 @@
 \end{customsection}
  
 % Award
-\begin{customsectionnoskip}{Award and Achievements}
+\begin{customsectionnoskip}{Awards and Achievements}
 
     \award{Bronze Medal, Top 8\% (69/937)}{Lyft Autonomous Vehicles Motion Prediction, Kaggle Competition}{Nov. 2020}
 

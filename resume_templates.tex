@@ -1,8 +1,12 @@
 % resume_templates.tex
 
-% Define a global length for paragraph spacing
+% Define global length variables for paragraph and section spacing
 \newlength{\parskiplength}
-\setlength{\parskiplength}{0.75em} 
+\newlength{\sectionskiplength}
+
+% Set the spacing values
+\setlength{\parskiplength}{0.5em} 
+\setlength{\sectionskiplength}{0.75em}
 
 % Custom Hyper Link Skill
 \newcommand{\customlink}[2]{
@@ -13,17 +17,16 @@
 \newcommand{\customheader}[4]{
     \begin{center}
         \textbf{\Large #1} \\ 
-        \vspace{0.25em}
         \textbf{Phone:} #2 \, 
         \textbf{Email:} \customlink{mailto:#3}{#3} \, 
         \textbf{LinkedIn:} \customlink{https://www.linkedin.com/in/#4}{#4}
     \end{center}
-    \vspace{-1.5em} % Reduce space after the header
+    \vspace{-1em} % Reduce space after the header
 }
 
 % Base custom section environment with adjustable paragraph spacing
 \newenvironment{basecustomsection}[2]{
-    \vspace{-0.5em}
+    \vspace{-1.5em + \sectionskiplength}
     \section*{\normalsize \MakeUppercase{#1}} % Section header 
     \vspace{-0.75em} % Reduce space between header and line
     \hrule
@@ -64,7 +67,7 @@
 
 % Experience Template
 \newcommand{\experience}[6]{
-    \textbf{#1}. #2. \hfill #3 \\
+    \textbf{#1}, #2. \hfill #3 \\
     \textit{#4} \\ 
     \textit{Tech Stack: #5.}
     \begin{customitemize}

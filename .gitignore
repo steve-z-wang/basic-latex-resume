@@ -7,4 +7,4 @@
 *.synctex.gz
 
 # PDF files (optional, if you don't want to track PDFs)
-*.pdf
+# *.pdf
