@@ -1,44 +1,72 @@
 % resume_templates.tex
 
+% Define a global length for paragraph spacing
+\newlength{\parskiplength}
+\setlength{\parskiplength}{0.75em} 
+
+% Custom Hyper Link Skill
+\newcommand{\customlink}[2]{
+    \href{#1}{\underline{#2}}
+}
+
 % Custom Header Command Template
-\newcommand{\customheader}[4]{%
+\newcommand{\customheader}[4]{
     \begin{center}
-    \textbf{\Large #1}\\ % Name
-    \vspace{0.5em}
-    \textbf{Phone:} #2 \, 
-    \textbf{Email:} \href{mailto:#3}{#3} \, 
-    \textbf{LinkedIn:} \href{https://www.linkedin.com/in/#4}{#4}
+        \textbf{\Large #1} \\ 
+        \vspace{0.25em}
+        \textbf{Phone:} #2 \, 
+        \textbf{Email:} \customlink{mailto:#3}{#3} \, 
+        \textbf{LinkedIn:} \customlink{https://www.linkedin.com/in/#4}{#4}
     \end{center}
     \vspace{-1.5em} % Reduce space after the header
 }
 
-% Custom section environment
-\newenvironment{customsection}[1]{
+% Base custom section environment with adjustable paragraph spacing
+\newenvironment{basecustomsection}[2]{
     \vspace{-0.5em}
-    \section*{\normalsize \MakeUppercase{#1}} % Set section header size to normal text size
+    \section*{\normalsize \MakeUppercase{#1}} % Section header 
     \vspace{-0.75em} % Reduce space between header and line
     \hrule
-    
     \begingroup
     \setlength{\parindent}{0em} % No indentation for paragraphs
-    \setlength{\parskip}{1em} 
+    \setlength{\parskip}{#2}
 }{
     \endgroup
 }
 
-% Custom itemize environment
+% Custom section with paragraph spacing
+\newenvironment{customsection}[1]{
+    \begin{basecustomsection}{#1}{\parskiplength}
+}{
+    \end{basecustomsection}
+}
+
+% Custom section without paragraph spacing
+\newenvironment{customsectionnoskip}[1]{
+    \begin{basecustomsection}{#1}{0em}
+    \vspace{\parskiplength}
+}{
+    \end{basecustomsection}
+}
+
+% Custom itemize environment with zero spacing between items
 \newenvironment{customitemize}{
     \vspace{-\parskip}
-    \begin{itemize}[left=1em, topsep=0em, itemsep=0em, partopsep=0em, parsep=0em]
+    \begin{itemize}[left=0.5em, topsep=0em, itemsep=0em, partopsep=0em, parsep=0em]
 }{
     \end{itemize}
+}
+
+% Skills Template
+\newcommand{\skillgroup}[2]{
+    \textbf{#1}: #2. 
 }
 
 % Experience Template
 \newcommand{\experience}[6]{
     \textbf{#1}. #2. \hfill #3 \\
     \textit{#4} \\ 
-    \textit{Technologies: #5}
+    \textit{Tech Stack: #5.}
     \begin{customitemize}
         #6 % This will allow you to use \item inside the command
     \end{customitemize}
@@ -47,7 +75,7 @@
 % Project Template
 \newcommand{\project}[5]{
     \textbf{#1}. #2. \hfill #3 \\
-    \textit{Technologies: #4}
+    \textit{Tech Stack: #4.}
     \begin{customitemize}
         #5 % This will allow you to use \item inside the command
     \end{customitemize}
@@ -56,7 +84,7 @@
 % Education Template
 \newcommand{\education}[4]{
     \textbf{#1}. #2. \hfill #3 \\ 
-    #4
+    #4. 
 }
 
 % Award Template

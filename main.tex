@@ -1,15 +1,16 @@
-\documentclass[a4paper,10pt]{extarticle}
+\documentclass[10pt]{article}
 
 % Import the templates and custom commands from the external file
 \input{resume_templates}
 
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
-\usepackage{geometry} % For page margins
-\geometry{a4paper, margin=0.5in} % Set paper size and margins
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref} % Hyperlinks setup 
+\usepackage[letterpaper, margin=0.4in]{geometry}
 \usepackage{enumitem} % For customizing itemize environments
 \usepackage{setspace}
+
+% Automatically underline all hyperlinks
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref} % Hyperlinks setup 
 
 % Begin document
 \begin{document}
@@ -18,26 +19,29 @@
 \pagestyle{empty}
 
 % Header
-\customheader{Steve Wang}{(650) 799-2578}{sw2327@cornell.edu}{stevewang2000}
+\customheader{Steve Wang}{(650) 799-2578}{stevewang.at.work@gmail.com}{stevewang2000}
 
 % Skills 
-\begin{customsection}{Skills}
-    \textbf{Languages \& Tools:} Python, Java, JavaScript, C, C++, C\#, SQL, Bash, MATLAB, Docker, Git\\ 
-    \textbf{Technologies:} AWS, React, Django, Flask, Redis, Unity, Pandas, Scikit-learn, Keras, PyTorch, TensorFlow \\ 
-    \textbf{Expertise:} Full-stack Development, Cloud Computing, Machine Learning, Embedded System
-\end{customsection}
+\begin{customsectionnoskip}{Skills}
+
+    \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning, Embedded System} \\ 
+    \skillgroup{Languages \& Tools}{Python, Java, JavaScript, C, C++, C\#, SQL, Bash, PostgreSQL, MATLAB, Docker, Git} \\ 
+    \skillgroup{Technologies}{AWS, React, Django, Flask, Spring Boot, Redis, NumPy, Pandas, Scikit-learn, TensorFlow} 
+
+\end{customsectionnoskip}
 
 % Experience 
 \begin{customsection}{Experience}
 
     % Experience #1
-    \experience{Amazon Web Services (AWS)}{Seattle, WA}{May 2024 - Aug. 2024}{Software Development Engineer Internship}
-    {AWS (Lambda, Fargate, S3, DynamoDB, ECR), Python, Boto3, Docker, AWS CDK}
+    \experience{Amazon Web Services (AWS)} {Seattle, WA} {May 2024 -- Aug. 2024}
+    {Software Development Engineer Internship}
+    {Python, AWS (Lambda, Fargate, S3, DynamoDB, Redshift, IAM), Docker, Boto3, AWS CDK}
     {
-        \item Designed and implemented a Slack App for internal customers to provide precise business data forecasts, improving planning and time management by addressing the limitations of existing generic estimations.
+        \item Designed and implemented an end-to-end business data forecasting service for AWS Snow internal customers, enhancing planning and time management by addressing limitations of existing generic estimations.
+        \item Developed a robust machine learning model to accurately predict service lead times across multiple percentiles, overcoming challenges of imbalanced and limited data through specialized feature engineering, including survival analysis and lag features. 
         \item Implemented and deployed a weekly model training pipeline to process long-term data and retrain the model, along with a daily batch prediction pipeline to handle short-term data and generate daily predictions, ensuring up-to-date and accurate machine learning outcomes.
-        \item Developed a robust machine learning model to predict service lead times across various percentiles, overcoming challenges related to imbalanced and limited data. 
-        \item Collaborated closely with internal customers and UX designers to create a user-friendly Slack bot interface. 
+        \item Collaborated closely with internal customers and UX designers to create a user-friendly Slack bot interface, ensuring the service met customer needs and was accessible and easy to use.
     }
     
 \end{customsection}
@@ -45,29 +49,29 @@
 % Projects 
 \begin{customsection}{Projects}
 
-    \project{TracCrop: Master’s Degree Capstone Project}{Ithaca, NY}{Oct. 2023 - Present}
-    {Azure, Python, Django, Javascript, React, SQL, Redis}
+    \project{TracCrop: Master’s Degree Capstone Project}{Ithaca, NY}{Oct. 2023 -- Present}
+    {Javascript, Python, React, Django, SQL, Redis, Azure}
     {
-        \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, enabling them to manage crop status, chemical usage, monitoring, policy compliance, and sustainability tasks within an integrated platform.
-        \item Developed specialized workflow control and data visualization features based on user feedback, designed the front-end interface, and created corresponding endpoints and RESTful web services.
-        \item Optimized data retrieval by introducing a Redis-based caching layer, reducing business dashboard and report page load times from 15 seconds to under 2 seconds.
-        \item Established a scheduled, automated data pipeline to fetch and update reference data from public chemical and agricultural sources, ensuring the database remains consistently accurate with the latest information.
+        \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within an integrated system.
+        \item Implemented specialized workflow controls and data visualization features from customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
+        \item Optimized data retrieval by implementing a Redis-based caching layer, reducing business dashboard and report page load times from 15 seconds to under 1 seconds, significantly improving the customer experience.
+        \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and up-to-date information.
     }
 
     \project{Interactive LED Clock (Embedded System Course Project)}{Ithaca, NY}{Nov. 2023}
-    {Raspberry Pi, Python, GPIO, C++, Multi-threading}
+    {C++, Python, Raspberry Pi, GPIO, Multi-threading}
     {
-        \item Designed and developed an interactive LED clock using Raspberry Pi, featuring three continuous LED pixel panels display with gravity simulation for dynamic display orientation.
+        \item Designed and developed an interactive LED clock using Raspberry Pi, featuring continuous display of three LED pixel panels with gravity simulation for dynamic display orientation.
         \item Created user interaction features, including gravity-based orientation effects, snowflake pixel effects, alarm settings, image rolling, and transitioning between display panels, managed through a gyro sensor and physical buttons connected via GPIO.
         \item Wrote a custom inter-process FIFO driver for efficient pixel data transfer and real-time updates, ensuring smooth performance and custom animations on the LED matrix.
     }
 
-    \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}{Atlanta, GA}{Sep. 2022 - Dec. 2022}
-    {Unity, C\#}
+    \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}{Atlanta, GA}{Sep. 2022 -- Dec. 2022}
+    {C\#, Unity}
     {
-        \item Developed an online, multiplayer, co-op, rogue-like pixel game where players control a ghost with the unique ability to possess enemies, collaboratively with a team of five using Scrum methodology.
-        \item Utilized Unity's Random Function for dungeon generation, creating dynamic and unpredictable levels with prefab-based room and corridor structures.
-        \item Contributed to the design and development of enemy AI, including custom animations, abilities, and interaction logic.
+        \item Worked with a team of five using Scrum methodology to create an online, multiplayer, rogue-like pixel game where players control a ghost with the ability to possess enemies and harness their powers.
+        \item Utilized Unity’s Random Function to generate procedurally generated dungeons with prefab-based room and corridor structures, ensuring unique levels for each playthrough.
+        \item Implemented enemy behaviors with custom animations, abilities, and interaction logic, enhancing the game's challenge and player engagement.
     }
 
 \end{customsection}
@@ -75,20 +79,20 @@
 % Education 
 \begin{customsection}{EDUCATION}
 
-    \education{Cornell University}{Ithaca, NY}{Sep. 2023 – Dec. 2024 (Expected)}
-    {Master of Engineering, Electrical and Computer Engineering, GPA 3.55/4.00}
+    \education{Cornell University}{Ithaca, NY}{Sep. 2023 -- Dec. 2024 (Expected)}
+    {Master of Engineering, Electrical and Computer Engineering, GPA: 3.55/4.00}
 
-    \education{Emory University}{Atlanta, GA}{Sep. 2021 – May 2023}
-    {Bachelor of Science, Mathematics \& Computer Science, GPA 3.57/4.00}
+    \education{Emory University}{Atlanta, GA}{Sep. 2021 -- May 2023}
+    {Bachelor of Science, Mathematics \& Computer Science, GPA: 3.57/4.00}
 
 \end{customsection}
  
 % Award
-\begin{customsection}{Award and Achievements}
+\begin{customsectionnoskip}{Award and Achievements}
 
-    \award{Bronze Award, Top 8\% (69/937)}{Lyft Autonomous Vehicles Motion Prediction Competition}{Nov. 2020}
+    \award{Bronze Medal, Top 8\% (69/937)}{Lyft Autonomous Vehicles Motion Prediction, Kaggle Competition}{Nov. 2020}
 
-\end{customsection}
+\end{customsectionnoskip}
 
 % End document
 \end{document}
