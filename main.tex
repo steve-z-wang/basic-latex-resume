@@ -6,11 +6,13 @@
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
 \usepackage[letterpaper, margin=0.5in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref} % Hyperlinks setup 
 \usepackage{enumitem} % For customizing itemize environments
 \usepackage{calc} % For length calculation 
 
-% Automatically underline all hyperlinks
-\usepackage[colorlinks=true, urlcolor=blue]{hyperref} % Hyperlinks setup 
+% Set the spacing values
+\setlength{\parskiplength}{0.5em} 
+\setlength{\sectionskiplength}{0.75em}
 
 % Begin document
 \begin{document}
@@ -41,7 +43,7 @@
         \item Designed and implemented an end-to-end business data forecasting service for AWS Snow internal customers, enhancing planning and time management by addressing limitations of existing generic estimations.
         \item Developed a robust machine learning model to accurately predict service lead times across multiple percentiles, overcoming challenges of imbalanced and limited data through various feature engineering techniques, including survival analysis and tailored lag features. 
         \item Implemented and deployed a weekly model training pipeline to process long-term data and retrain the model, along with a daily batch prediction pipeline to handle short-term data and generate daily predictions, ensuring up-to-date and accurate machine learning results. 
-        \item Engaged with multiple internal customers and collaborated closely with UX designers to create a user-friendly Slack bot interface, guaranteeing the service met customer needs and was both accessible and easy to use.
+        \item Engaged with multiple internal customers and collaborated closely with a UX designer to create a user-friendly Slack bot interface, guaranteeing the service met customer needs and was both accessible and easy to use.
     }
     
 \end{customsection}
@@ -54,8 +56,8 @@
     {
         \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within a unified system.
         \item Implemented specialized workflow controls and data visualization features from customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
-        \item Optimized data retrieval by implementing a Redis-based caching layer, reducing business dashboard and report page load times from an average of 12 seconds to under 1 second, significantly improving the customer experience.
         \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and maintaining up-to-date information.
+        \item Optimized data retrieval by implementing a Redis-based caching layer, reducing business dashboard and report page load times from an average of 12 seconds to under 1 second, significantly improving the customer experience.
     }
 
     \project{Interactive LED Clock (Embedded System Course Project)}{Ithaca, NY}{Nov. 2023}
@@ -70,7 +72,7 @@
     {C\#, Unity}
     {
         \item Worked with a team of five using Scrum methodology to create an online, multiplayer, rogue-like pixel game where players control a ghost with the ability to possess enemies and harness their powers.
-        \item Utilized Unity’s Random Function to generate procedurally generated dungeons with prefab-based room and corridor structures, ensuring unique levels for each playthrough.
+        \item Utilized Unity’s Random Function to create procedurally generated dungeons with prefab-based room and corridor structures, ensuring that each playthrough features unique levels. 
         \item Implemented enemy behaviors with tailored abilities, interactive logic, and custom animations, enhancing the game's challenge and deepening player engagement.
     }
 
