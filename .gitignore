@@ -6,5 +6,8 @@
 *.fdb_latexmk
 *.synctex.gz
 
+# mac os
+.DS_Store  
+
 # PDF files (optional, if you don't want to track PDFs)
 # *.pdf
