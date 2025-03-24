@@ -15,7 +15,7 @@
         \textbf{\Large #1} \\ 
         \textbf{Phone:} #2 \, 
         \textbf{Email:} \customlink{mailto:#3}{#3} \, 
-        \textbf{LinkedIn:} \customlink{https://www.linkedin.com/in/#4}{#4}
+        \textbf{LinkedIn:} \customlink{https://www.#4}{#4}
     \end{center}
     \vspace{-1em} % Reduce space after the header
 }
@@ -64,8 +64,8 @@
 % Experience Template
 \newcommand{\experience}[6]{
     \textbf{#1}, #2. \hfill #3 \\
-    \textit{#4} \\ 
-    \textit{Tech Stack: #5.}
+    \textit{#4}
+    \ifstrempty{#5}{}{\\ \textit{Tech Stack: #5.}} % Conditional for Tech Stack
     \begin{customitemize}
         #6 % This will allow you to use \item inside the command
     \end{customitemize}
@@ -73,8 +73,8 @@
 
 % Project Template
 \newcommand{\project}[5]{
-    \textbf{#1}. #2. \hfill #3 \\
-    \textit{Tech Stack: #4.}
+    \textbf{#1}. #2. \hfill #3
+    \ifstrempty{#4}{}{\\ \textit{Tech Stack: #4.}} % Conditional for Tech Stack
     \begin{customitemize}
         #5 % This will allow you to use \item inside the command
     \end{customitemize}
@@ -82,7 +82,7 @@
 
 % Education Template
 \newcommand{\education}[4]{
-    \textbf{#1}. #2. \hfill #3 \\ 
+    \textbf{#1}, #2. \hfill #3 \\ 
     #4. 
 }
 

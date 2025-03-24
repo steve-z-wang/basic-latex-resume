@@ -5,14 +5,15 @@
 
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
-\usepackage[letterpaper, margin=0.5in]{geometry}
+\usepackage[letterpaper, margin=0.30in]{geometry}
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref} % Hyperlinks setup 
 \usepackage{enumitem} % For customizing itemize environments
 \usepackage{calc} % For length calculation 
+\usepackage{ifthen} % For conditional statements
 
 % Set the spacing values
-\setlength{\parskiplength}{0.5em} 
-\setlength{\sectionskiplength}{0.75em}
+\setlength{\parskiplength}{0.15em} 
+\setlength{\sectionskiplength}{0.25em}
 
 % Begin document
 \begin{document}
@@ -21,29 +22,49 @@
 \pagestyle{empty}
 
 % Header
-\customheader{Steve Wang}{(650) 799-2578}{stevewang.at.work@gmail.com}{stevewang2000}
-
+\customheader{Steve Wang}{(650) 799-2578}{stevewang.at.work@gmail.com}{linkedin.com/in/stevewang2000}
+ 
 % Skills 
 \begin{customsectionnoskip}{Skills}
 
     \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning, Embedded Systems} \\ 
-    \skillgroup{Languages \& Tools}{Python, Java, JavaScript, C, C++, C\#, SQL, Bash, PostgreSQL, MATLAB, Docker, Git} \\ 
-    \skillgroup{Technologies}{AWS, React, Django, Flask, Spring Boot, Redis, NumPy, Pandas, Scikit-learn, TensorFlow} 
+    \skillgroup{Languages \& Tools}{Python, Java, JavaScript, C, C++, C\#, SQL, Bash, PostgreSQL, Redis, Docker, Git, Figma} \\ 
+    \skillgroup{Frameworks \& Libraries}{AWS, React, Django, Flask, Spring Boot, NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch} 
 
 \end{customsectionnoskip}
 
 % Experience 
 \begin{customsection}{Experience}
 
-    % Experience #1
-    \experience{Amazon Web Services (AWS)} {Seattle, WA} {May 2024 -- Aug. 2024}
+    \experience{arXiv.org} 
+    {Ithaca, NY} 
+    {Sept. 2024 -- present}
+    {Volunteer Contributor}
+    {}
+    {
+        \item Developing a field classification system for research papers using large language models (LLM), reducing user error rate and moderator overhead.
+    }
+
+    % Experience #2
+    \experience{Amazon Web Services (AWS)} 
+    {Seattle, WA} 
+    {Jun. 2024 -- Aug. 2024}
     {Software Development Engineer Internship}
     {Python, AWS (Lambda, Fargate, S3, DynamoDB, Redshift, IAM), Docker, Boto3, AWS CDK}
     {
-        \item Designed and implemented an end-to-end business data forecasting service for AWS Snow internal customers, enhancing planning and time management by addressing limitations of existing generic estimations.
-        \item Developed a robust machine learning model to accurately predict service lead times across multiple percentiles, overcoming challenges of imbalanced and limited data through various feature engineering techniques, including survival analysis and tailored lag features. 
-        \item Implemented and deployed a weekly model training pipeline to process long-term data and retrain the model, along with a daily batch prediction pipeline to handle short-term data and generate daily predictions, ensuring up-to-date and accurate machine learning results. 
-        \item Engaged with multiple internal customers and collaborated closely with a UX designer to create a user-friendly Slack bot interface, guaranteeing the service met customer needs and was both accessible and easy to use.
+        \item Designed and implemented a comprehensive business data forecasting service, improving planning accuracy for AWS Snow customers by addressing the limitations of existing estimation tools.
+        \item Developed a machine learning model to predict lead times across various percentiles, utilizing feature engineering techniques like survival analysis and lag features to address problem-specific challenges.
+        \item Built and deployed pipelines for weekly model retraining and daily batch predictions, ensuring the model stayed accurate with both long-term and short-term data.
+        \item Collaborated with internal stakeholders and a UX designer to create a Slack bot interface that improved user accessibility and aligned with customer needs.
+    }
+
+    \experience{Graph Mining Group at Emory University} 
+    {Atlanta, GA} 
+    {Sept. 2022 -- Jan. 2023}
+    {Undergraduate Research Assistant}
+    {}
+    {
+        \item Helped create various medical and pharmaceutical training datasets for graph machine learning models.
     }
     
 \end{customsection}
@@ -51,29 +72,45 @@
 % Projects 
 \begin{customsection}{Projects}
 
-    \project{TracCrop: Master’s Degree Capstone Project}{Ithaca, NY}{Oct. 2023 -- Present}
+    Here’s a revised and reconstructed version with minimal overlap between items:
+
+    \project{Database System from Scratch (CS 4321: Practicum in Database Systems)}
+    {Ithaca, NY}
+    {Sept. 2024 -- present} 
+    {} 
+    { 
+        \item Solely implemented a static SQL processing system with 7,500+ lines of Java code, featuring a SQL query plan builder and modular architecture for extensibility.
+        \item Developed core functionalities, including efficient data processing algorithms such as external sorting, block nested loop joins, sort-merge joins, and B+ tree indexing for rapid data access.
+        \item Ensured system reliability and performance through rigorous unit and integration testing, utilizing large-scale random data generation and benchmarking serialized I/O workflows.
+    }
+
+    \project{TracCrop: Master’s Degree Capstone Project}
+    {Ithaca, NY}
+    {Oct. 2023 -- May 2024}
     {JavaScript, Python, React, Django, SQL, Redis, Azure}
     {
-        \item Maintained and enhanced an Agriculture Business and Data Management Platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within a unified system.
-        \item Implemented specialized workflow controls and data visualization features from customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
+        \item Maintained and enhanced an agriculture business and data management platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within a unified system.
+        \item Implemented specialized workflow controls and data visualization features based on customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
         \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and maintaining up-to-date information.
-        \item Optimized data retrieval by implementing a Redis-based caching layer, reducing business dashboard and report page load times from an average of 12 seconds to under 1 second, significantly improving the customer experience.
     }
 
-    \project{Interactive LED Clock (Embedded System Course Project)}{Ithaca, NY}{Nov. 2023}
-    {C++, Python, Raspberry Pi, GPIO, Multi-threading}
+    \project{Interactive LED Clock (Embedded System Course Project)}
+    {Ithaca, NY}{Nov. 2023}
+    {}
     {
-        \item Designed and developed an interactive LED clock using a Raspberry Pi, featuring a continuous display across three LED pixel panels with a gravitational sensor input for dynamic orientation and effects.
-        \item Created user interaction features, including gravity-based orientation and snowflake pixel effects managed through a gyro sensor, as well as an alarm settings interface activated via physical buttons connected through GPIO.
-        \item Developed a custom inter-process FIFO driver for a 3-panel LED display, enabling efficient and reliable pixel data transfer and real-time updates across multiple threads, facilitating smooth performance and seamless custom animations on the LED matrix.
+        \item Built an interactive LED clock using a Raspberry Pi, displaying across three LED panels with dynamic orientation and effects from a gyroscopic sensor. 
+        \item Added features like gravity-based orientation, snowflake effects, and an alarm interface controlled by physical buttons. 
+        \item Developed a custom inter-process FIFO driver for efficient pixel data transfer and real-time updates, enabling smooth performance and animations. 
     }
 
-    \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}{Atlanta, GA}{Sep. 2022 -- Dec. 2022}
-    {C\#, Unity}
+    \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}
+    {Atlanta, GA}
+    {Sept. 2022 -- Dec. 2022}
+    {}
     {
-        \item Worked with a team of five using Scrum methodology to create an online, multiplayer, rogue-like pixel game where players control a ghost with the ability to possess enemies and harness their powers.
-        \item Utilized Unity’s Random Function to create procedurally generated dungeons with prefab-based room and corridor structures, ensuring that each playthrough features unique levels. 
-        \item Implemented enemy behaviors with tailored abilities, interactive logic, and custom animations, enhancing the game's challenge and deepening player engagement.
+        \item Collaborated with a team of five using Scrum to develop an online, multiplayer, rogue-like pixel game where players control a ghost that can possess enemies.
+        \item Created procedurally generated dungeons with prefab-based rooms and corridors for unique level designs.
+        \item Developed custom enemy behaviors, interactive logic, and animations, enhancing game difficulty and player engagement.
     }
 
 \end{customsection}
@@ -81,16 +118,17 @@
 % Education 
 \begin{customsection}{EDUCATION}
 
-    \education{Cornell University}{Ithaca, NY}{Sep. 2023 -- Dec. 2024 (Expected)}
-    {Master of Engineering, Electrical and Computer Engineering, GPA: 3.55/4.00}
+    \education{Cornell University}{Ithaca, NY}{Sept. 2023 -- Dec. 2024 (expected)}
+    {Master of Engineering in Electrical \& Computer Engineering, GPA: 3.6/4.0}
 
-    \education{Emory University}{Atlanta, GA}{Sep. 2021 -- May 2023}
-    {Bachelor of Science, Mathematics \& Computer Science, GPA: 3.57/4.00}
+    \education{Emory University}{Atlanta, GA}{Sept. 2021 -- May 2023}
+    {Bachelor of Science in Mathematics \& Computer Science, GPA: 3.6/4.0}
 
 \end{customsection}
- 
+
+
 % Award
-\begin{customsectionnoskip}{Awards and Achievements}
+\begin{customsectionnoskip}{Awards \& Achievements}
 
     \award{Bronze Medal, Top 8\% (69/937)}{Lyft Autonomous Vehicles Motion Prediction, Kaggle Competition}{Nov. 2020}
 
