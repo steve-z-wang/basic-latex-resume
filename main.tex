@@ -10,6 +10,7 @@
 \usepackage{enumitem} % For customizing itemize environments
 \usepackage{calc} % For length calculation 
 \usepackage{ifthen} % For conditional statements
+\usepackage{fontawesome5} % For FontAwesome icons
 
 % Set the spacing values
 \setlength{\parskiplength}{0.15em} 
@@ -22,12 +23,12 @@
 \pagestyle{empty}
 
 % Header
-\customheader{Steve Wang}{(650) 799-2578}{stevewang.at.work@gmail.com}{linkedin.com/in/stevewang2000}
+\customheader{Steve Wang}{(650) 799-2578}{stevewang.at.work@gmail.com}{stevewang2000}{stevewanglog.com}{steve-z-wang}
  
 % Skills 
 \begin{customsectionnoskip}{Skills}
 
-    \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning, Embedded Systems} \\ 
+    \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning} \\ 
     \skillgroup{Languages \& Tools}{Python, Java, JavaScript, C, C++, C\#, SQL, Bash, PostgreSQL, Redis, Docker, Git, Figma} \\ 
     \skillgroup{Frameworks \& Libraries}{AWS, React, Django, Flask, Spring Boot, NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch} 
 
@@ -36,35 +37,52 @@
 % Experience 
 \begin{customsection}{Experience}
 
-    \experience{arXiv.org} 
-    {Ithaca, NY} 
-    {Sept. 2024 -- present}
-    {Volunteer Contributor}
-    {}
+    \experience{Software Development Engineer}
+    {Amazon, Buy with Prime}
+    {Seattle, WA}
+    {Feb. 2025 -- present}
     {
-        \item Developing a field classification system for research papers using large language models (LLM), reducing user error rate and moderator overhead.
+        \item Refactored code across multiple packages for a GraphQL API service using Python and AWS Lambda.
+        \item Reduced codebase size by two-thirds, improving maintainability and reducing technical debt; projected to save 4-6 weeks of team development time for each new API version.
     }
 
-    % Experience #2
-    \experience{Amazon Web Services (AWS)} 
+    \experience{Software Development Engineer}
+    {AWS, Elastic VMware Service}
+    {Seattle, WA}
+    {Feb. 2025 -- Apr. 2025}
+    {
+        \item Led a time-sensitive integration project with the Account Termination Service (Java, AWS), delivering to GA 2 days ahead of schedule.
+        \item Wrote and reviewed over 8,000 lines of production code, with a net increase of +5,500 LOC, including core deletion logic, data isolation flows, alarms, dashboards, and pipeline safety checks.
+        \item Aligned design with principal engineer, implemented operational tooling, and unblocked production readiness through test automation and documentation.
+        \item Ensured team continuity by writing a comprehensive onboarding guide and driving cross-team alignment post-handover.
+    }
+
+    \experience{Volunteer}
+    {arXiv.org} 
+    {Ithaca, NY} 
+    {Sept. 2024 -- Dec. 2024}
+    {
+        \item Developed a field classification system for research papers using large language models (LLM), reducing user error rate and moderator overhead.
+        \item Built a web application for research paper submission and review automation (Python, Flask).
+    }
+
+    \experience{Software Development Engineer Internship}
+    {AWS, Outposts} 
     {Seattle, WA} 
     {Jun. 2024 -- Aug. 2024}
-    {Software Development Engineer Internship}
-    {Python, AWS (Lambda, Fargate, S3, DynamoDB, Redshift, IAM), Docker, Boto3, AWS CDK}
     {
-        \item Designed and implemented a comprehensive business data forecasting service, improving planning accuracy for AWS Snow customers by addressing the limitations of existing estimation tools.
-        \item Developed a machine learning model to predict lead times across various percentiles, utilizing feature engineering techniques like survival analysis and lag features to address problem-specific challenges.
+        \item Designed and implemented a business data forecasting service for AWS Snow customers using Python, AWS Lambda, and Redshift, improving planning accuracy.
+        \item Developed a machine learning model to predict lead times across various percentiles, utilizing survival analysis and lag features.
         \item Built and deployed pipelines for weekly model retraining and daily batch predictions, ensuring the model stayed accurate with both long-term and short-term data.
         \item Collaborated with internal stakeholders and a UX designer to create a Slack bot interface that improved user accessibility and aligned with customer needs.
     }
 
-    \experience{Graph Mining Group at Emory University} 
+    \experience{Research Assistant}
+    {Emory Graph Mining Group} 
     {Atlanta, GA} 
     {Sept. 2022 -- Jan. 2023}
-    {Undergraduate Research Assistant}
-    {}
     {
-        \item Helped create various medical and pharmaceutical training datasets for graph machine learning models.
+        \item Created medical and pharmaceutical training datasets for graph machine learning models (Python, Pandas).
     }
     
 \end{customsection}
@@ -72,16 +90,13 @@
 % Projects 
 \begin{customsection}{Projects}
 
-    Here’s a revised and reconstructed version with minimal overlap between items:
-
-    \project{Database System from Scratch (CS 4321: Practicum in Database Systems)}
+    \project{SQL Query Engine from Scratch (CS 4321: Practicum in Database Systems)}
     {Ithaca, NY}
     {Sept. 2024 -- present} 
     {} 
     { 
-        \item Solely implemented a static SQL processing system with 7,500+ lines of Java code, featuring a SQL query plan builder and modular architecture for extensibility.
-        \item Developed core functionalities, including efficient data processing algorithms such as external sorting, block nested loop joins, sort-merge joins, and B+ tree indexing for rapid data access.
-        \item Ensured system reliability and performance through rigorous unit and integration testing, utilizing large-scale random data generation and benchmarking serialized I/O workflows.
+        \item Independently built a static SQL query engine (originally designed for a team of four), delivering over 7,500 lines of Java code.
+        \item Implemented advanced data processing algorithms—including dynamic heuristic optimization for query plans, external sorting, block nested loop joins, sort-merge joins, B+ tree indexing, page buffer accessing, and a custom serialization format—to enable quick and efficient data access.
     }
 
     \project{TracCrop: Master’s Degree Capstone Project}
@@ -92,15 +107,6 @@
         \item Maintained and enhanced an agriculture business and data management platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within a unified system.
         \item Implemented specialized workflow controls and data visualization features based on customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
         \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and maintaining up-to-date information.
-    }
-
-    \project{Interactive LED Clock (Embedded System Course Project)}
-    {Ithaca, NY}{Nov. 2023}
-    {}
-    {
-        \item Built an interactive LED clock using a Raspberry Pi, displaying across three LED panels with dynamic orientation and effects from a gyroscopic sensor. 
-        \item Added features like gravity-based orientation, snowflake effects, and an alarm interface controlled by physical buttons. 
-        \item Developed a custom inter-process FIFO driver for efficient pixel data transfer and real-time updates, enabling smooth performance and animations. 
     }
 
     \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}
@@ -118,7 +124,7 @@
 % Education 
 \begin{customsection}{EDUCATION}
 
-    \education{Cornell University}{Ithaca, NY}{Sept. 2023 -- Dec. 2024 (expected)}
+    \education{Cornell University}{Ithaca, NY}{Sept. 2023 -- Dec. 2024}
     {Master of Engineering in Electrical \& Computer Engineering, GPA: 3.6/4.0}
 
     \education{Emory University}{Atlanta, GA}{Sept. 2021 -- May 2023}
