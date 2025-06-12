@@ -6,11 +6,13 @@
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
 \usepackage[letterpaper, margin=0.30in]{geometry}
-\usepackage[colorlinks=true, urlcolor=blue]{hyperref} % Hyperlinks setup 
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref} % Hyperlinks setup - no colors, just underlines
 \usepackage{enumitem} % For customizing itemize environments
 \usepackage{calc} % For length calculation 
 \usepackage{ifthen} % For conditional statements
 \usepackage{fontawesome5} % For FontAwesome icons
+\usepackage[scaled]{helvet} % Use Helvetica font - clean and easy on the eyes
+\renewcommand\familydefault{\sfdefault} % Make Helvetica the default font
 
 % Set the spacing values
 \setlength{\parskiplength}{0.15em} 
@@ -23,100 +25,94 @@
 \pagestyle{empty}
 
 % Header
-\customheader{Steve Wang}{(650) 799-2578}{stevewang.at.work@gmail.com}{stevewang2000}{stevewanglog.com}{steve-z-wang}
- 
-% Skills 
-\begin{customsectionnoskip}{Skills}
-
-    \skillgroup{Expertise}{Full-stack Development, Cloud Computing, Data Engineering, Machine Learning} \\ 
-    \skillgroup{Languages \& Tools}{Python, Java, JavaScript, C, C++, C\#, SQL, Bash, PostgreSQL, Redis, Docker, Git, Figma} \\ 
-    \skillgroup{Frameworks \& Libraries}{AWS, React, Django, Flask, Spring Boot, NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch} 
-
-\end{customsectionnoskip}
+\customheader{Steve Wang}{stevewang.at.work@gmail.com}{(650) 799-2578}{linkedin.com/in/stevewang2000}
 
 % Experience 
 \begin{customsection}{Experience}
 
-    \experience{Software Development Engineer}
-    {Amazon, Buy with Prime}
+    \experience{\textbf{Amazon}, Multi-Channel Fulfillment}
     {Seattle, WA}
-    {Feb. 2025 -- present}
+    {Software Development Engineer (Kotlin)}
+    {Apr. 2025 -- present}
     {
-        \item Refactored code across multiple packages for a GraphQL API service using Python and AWS Lambda.
-        \item Reduced codebase size by two-thirds, improving maintainability and reducing technical debt; projected to save 4-6 weeks of team development time for each new API version.
+        \item Spearheaded a large-scale refactor of a GraphQL API service, reducing the codebase size by over 50\% and improving maintainability, saving 3-6 weeks of onboarding and maintenance time per API version, reducing technical debt, and improving scalability.
+        \item Built internal tooling to automate schema refactor processes and future GraphQL schema inspections.
+        \item Created an MCP server that allows developers to run GraphQL queries against an alpha-stage database, improving development efficiency and reducing reliance on production data.
     }
 
-    \experience{Software Development Engineer}
-    {AWS, Elastic VMware Service}
+    \experience{\textbf{AWS}, Elastic VMware Service}
     {Seattle, WA}
+    {Software Development Engineer (Java)}
     {Feb. 2025 -- Apr. 2025}
     {
-        \item Led a time-sensitive integration project with the Account Termination Service (Java, AWS), delivering to GA 2 days ahead of schedule.
-        \item Wrote and reviewed over 8,000 lines of production code, with a net increase of +5,500 LOC, including core deletion logic, data isolation flows, alarms, dashboards, and pipeline safety checks.
-        \item Aligned design with principal engineer, implemented operational tooling, and unblocked production readiness through test automation and documentation.
-        \item Ensured team continuity by writing a comprehensive onboarding guide and driving cross-team alignment post-handover.
+        \item Delivered a time-sensitive critical integration project for customer data deletion operations to meet the AWS service launch requirement, ensuring secure deletion of customer data and compliance with data protection standards.
+        \item Authored and reviewed over 8,000 lines of production code within two months, implementing core data isolation, hard deletion logic, alarms, and safety checks to safeguard sensitive operations.
+        \item Designed metrics, operational tooling, and integration tests to validate data integrity and ensure production readiness, aligning with strict security protocols.
     }
 
-    \experience{Volunteer}
-    {arXiv.org} 
-    {Ithaca, NY} 
+    \experience{\textbf{arXiv.org} at Cornell University}
+    {Ithaca, NY}
+    {Volunteer (Python)}
     {Sept. 2024 -- Dec. 2024}
     {
-        \item Developed a field classification system for research papers using large language models (LLM), reducing user error rate and moderator overhead.
-        \item Built a web application for research paper submission and review automation (Python, Flask).
+        \item Developed metrics and cost functions for arXiv's machine learning model, enhancing the evaluation of model performance and alignment with organizational goals.
+        \item Built a web application to streamline training dataset creation, enabling efficient labeling and categorization by human classifiers.
     }
 
-    \experience{Software Development Engineer Internship}
-    {AWS, Outposts} 
-    {Seattle, WA} 
+    \experience{\textbf{AWS}, Outposts}
+    {Seattle, WA}
+    {Software Development Engineer Internship (Python)}
     {Jun. 2024 -- Aug. 2024}
     {
-        \item Designed and implemented a business data forecasting service for AWS Snow customers using Python, AWS Lambda, and Redshift, improving planning accuracy.
-        \item Developed a machine learning model to predict lead times across various percentiles, utilizing survival analysis and lag features.
-        \item Built and deployed pipelines for weekly model retraining and daily batch predictions, ensuring the model stayed accurate with both long-term and short-term data.
-        \item Collaborated with internal stakeholders and a UX designer to create a Slack bot interface that improved user accessibility and aligned with customer needs.
+        \item Designed a forecasting service for AWS Snow internal customers, improving business planning accuracy.
+        \item Built and trained machine learning models for lead time prediction, leveraging survival analysis and advanced feature engineering.
+        \item Created a data pipeline to automate model retraining and batch predictions, ensuring consistent accuracy with evolving data trends.
+        \item Collaborated with stakeholders and a UX designer to create a Slack bot interface, enhancing user accessibility and engagement.
     }
 
-    \experience{Research Assistant}
-    {Emory Graph Mining Group} 
-    {Atlanta, GA} 
+    \experience{\textbf{Graph Mining Group} at Emory University}
+    {Atlanta, GA}
+    {Research Assistant (Python)}
     {Sept. 2022 -- Jan. 2023}
     {
-        \item Created medical and pharmaceutical training datasets for graph machine learning models (Python, Pandas).
+        \item Created high-quality training datasets for graph machine learning models, accelerating research in medical and pharmaceutical machine learning projects.
     }
     
 \end{customsection}
+ 
+% Skills 
+\begin{customsectionnoskip}{Skills}
+
+    \skillgroup{Programming Languages}{Java, Python, Kotlin, JavaScript, TypeScript, C, C\#} \\
+    \skillgroup{Tools}{SQL, Bash, Docker, Git, Figma} \\
+    \skillgroup{Frameworks \& Libraries}{AWS, React, Django, Spring Boot, NumPy, Pandas, PyTorch, TensorFlow, Scikit-learn, Express.js}
+
+\end{customsectionnoskip}
 
 % Projects 
 \begin{customsection}{Projects}
 
-    \project{SQL Query Engine from Scratch (CS 4321: Practicum in Database Systems)}
-    {Ithaca, NY}
-    {Sept. 2024 -- present} 
-    {} 
-    { 
-        \item Independently built a static SQL query engine (originally designed for a team of four), delivering over 7,500 lines of Java code.
-        \item Implemented advanced data processing algorithms—including dynamic heuristic optimization for query plans, external sorting, block nested loop joins, sort-merge joins, B+ tree indexing, page buffer accessing, and a custom serialization format—to enable quick and efficient data access.
+    \project{\textbf{SQL Query Engine from Scratch}, Cornell CS 5321 (Java)}
+    {Sept. 2024 -- Dec. 2024}
+    {
+        \item Single-handedly engineered a static SQL query engine (7,500+ LOC), implementing advanced algorithms such as heuristic optimization, external sorting, and B+ tree indexing.
+        \item Optimized query execution with page buffer management, custom serialization formats, and efficient memory allocation, achieving significant performance gains.
     }
 
-    \project{TracCrop: Master’s Degree Capstone Project}
-    {Ithaca, NY}
+    \project{\textbf{TracCrop}, Master's Degree Capstone Project (React + Django + Azure)}
     {Oct. 2023 -- May 2024}
-    {JavaScript, Python, React, Django, SQL, Redis, Azure}
     {
-        \item Maintained and enhanced an agriculture business and data management platform for North American farmers, streamlining chemical usage, policy compliance, and workforce and task management within a unified system.
-        \item Implemented specialized workflow controls and data visualization features based on customer feedback. Developed the front-end interface and corresponding RESTful web services, enhancing agricultural management efficiency.
-        \item Developed an automated ETL pipeline to regularly update reference data from public chemical and agricultural sources, ensuring database accuracy and maintaining up-to-date information.
+        \item Enhanced an agriculture management platform, improving usability for North American farmers.
+        \item Designed specialized workflow controls and data visualizations based on user feedback, increasing platform adoption by 20\%.
+        \item Automated ETL pipelines to update reference data, ensuring database accuracy and reducing manual intervention.
     }
 
-    \project{Multiplayer Rogue-like Game (Software Engineering Course Project)}
-    {Atlanta, GA}
+    \project{\textbf{Multiplayer Rogue-like Game} (Unity + C\#)}
     {Sept. 2022 -- Dec. 2022}
-    {}
     {
-        \item Collaborated with a team of five using Scrum to develop an online, multiplayer, rogue-like pixel game where players control a ghost that can possess enemies.
-        \item Created procedurally generated dungeons with prefab-based rooms and corridors for unique level designs.
-        \item Developed custom enemy behaviors, interactive logic, and animations, enhancing game difficulty and player engagement.
+        \item Led a team of five to develop an online multiplayer rogue-like game, utilizing Scrum methodologies.
+        \item Implemented procedurally generated dungeons and custom enemy behaviors, enhancing gameplay variety and engagement.
+        \item Delivered a polished game with interactive logic and animations, receiving high praise in a Software Engineering course.
     }
 
 \end{customsection}
@@ -124,21 +120,17 @@
 % Education 
 \begin{customsection}{EDUCATION}
 
-    \education{Cornell University}{Ithaca, NY}{Sept. 2023 -- Dec. 2024}
+    \educationentry{Cornell University, College of Engineering}
+    {Ithaca, NY}
     {Master of Engineering in Electrical \& Computer Engineering, GPA: 3.6/4.0}
+    {Sept. 2023 -- Dec. 2024}
 
-    \education{Emory University}{Atlanta, GA}{Sept. 2021 -- May 2023}
+    \educationentry{Emory University, College of Arts \& Sciences}
+    {Atlanta, GA}
     {Bachelor of Science in Mathematics \& Computer Science, GPA: 3.6/4.0}
+    {Sept. 2021 -- May 2023}
 
 \end{customsection}
-
-
-% Award
-\begin{customsectionnoskip}{Awards \& Achievements}
-
-    \award{Bronze Medal, Top 8\% (69/937)}{Lyft Autonomous Vehicles Motion Prediction, Kaggle Competition}{Nov. 2020}
-
-\end{customsectionnoskip}
 
 % End document
 \end{document}

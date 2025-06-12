@@ -10,16 +10,12 @@
 }
 
 % Custom Header Command Template
-\newcommand{\customheader}[6]{%
+\newcommand{\customheader}[4]{%
     \begin{center}
-        {\Large\bfseries #1}\\[0.5em]
-        \faPhone\, #2 \quad
-        \faEnvelope\, \customlink{mailto:#3}{#3} \quad
-        \faLinkedin\, \customlink{https://www.linkedin.com/in/#4}{#4} \quad
-        \faGlobe\, \customlink{http://#5}{#5} \quad
-        \faGithub\, \customlink{https://github.com/#6}{#6} 
+        {\LARGE\bfseries #1} \\
+        \href{mailto:#2}{#2} \hspace{2em} #3 \hspace{2em} \href{https://www.#4}{#4}
     \end{center}
-    \vspace{-0.5em}%
+    \vspace{-1.5em}%
 }
 
 % Base custom section environment with adjustable paragraph spacing
@@ -66,25 +62,33 @@
 
 % Experience Template
 \newcommand{\experience}[5]{
-    \textbf{#1} \textit{#2}, #3 \hfill {\footnotesize #4} \\
+    #1 \hfill #2 \\
+    \textit{#3} \hfill {\footnotesize #4} 
+
     \begin{customitemize}
         #5 % This will allow you to use \item inside the command
     \end{customitemize}
 }
 
 % Project Template
-\newcommand{\project}[5]{
-    \textbf{#1}. #2. \hfill #3
-    \ifstrempty{#4}{}{\\ \textit{Tech Stack: #4.}} % Conditional for Tech Stack
+\newcommand{\project}[3]{
+    #1 \hfill {\footnotesize #2} 
+
     \begin{customitemize}
-        #5 % This will allow you to use \item inside the command
+        #3 % This will allow you to use \item inside the command
     \end{customitemize}
 }
 
 % Education Template
 \newcommand{\education}[4]{
-    \textbf{#1}, #2. \hfill #3 \\ 
-    #4. 
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill {\footnotesize #4}
+}
+
+% Education Template (no items)
+\newcommand{\educationentry}[4]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill {\footnotesize #4} 
 }
 
 % Award Template
